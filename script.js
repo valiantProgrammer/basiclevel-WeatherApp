@@ -2,17 +2,12 @@ async function fetchWeather() {
     const location = document.getElementById('location').value;
     if (!location.trim()) return;
 
-    if (location.toLowerCase() === 'kolkata') {
-        document.querySelector('body').style.backgroundImage = 'url(kolkata.webp)';
-    } else {
-        document.querySelector('body').style.backgroundImage = 'url(London.jpg)';
-    }
-
     const apiKey = "42a405b1c122467e8b680818251203";
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
 
     try {
         const response = await fetch(url);
+        if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
 
         if (data.error) {
@@ -28,9 +23,7 @@ async function fetchWeather() {
             `;
         }
     } catch (error) {
+        console.error('Fetch error:', error);
         document.getElementById('details').innerHTML = `<p style="color:red;">Failed to fetch weather data</p>`;
     }
 }
-
-// Fetch default location weather on page load
-document.addEventListener("DOMContentLoaded", fetchWeather);
