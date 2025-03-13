@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="icon" type="png" href="weathericon.png"> 
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <marquee behavior="scroll" direction="left">Welcome to my Weather website it is one of my portfolio</marquee>
+    <main>
+        <div class="box">
+            <div class="head">
+            <h1>Enter the city : </h1>
+            <div class="srch">
+                <input id="location" type="text" placeholder="Enter the city or region Name" value="London">
+                <input id="button" type="button" value="Submit" onclick="fetchWeather()">
+            </div>
+        </div>
+            <div id="details"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    background-image: url(kolkata.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: grid;
+    place-items: center;
+    background-color: rgba(29, 27, 27, 0.663);
+}
+
+marquee{
+    position: absolute;
+    z-index: 12;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.832);
+}
+
+.box{
+    width: 1000px;
+    height: fit-content;
+    display: grid;
+    place-items: center;
+    background-color: rgb(142, 211, 211);
+    border-radius: 9px;
+}
+
+h1{
+    font-size: 3.5rem;
+}
+
+.head{
+    padding: 20px;
+}
+
+input{
+    padding-left: 30px;
+    height: 40px;
+    width: 600px;
+    font-size: 1.6rem;
+    border-radius: 9px;
+}
+
+#button{
+    padding: 0;
+    border-radius: 7px;
+    width: 90px;
+    height: 40px;
+}
+
+.srch {
+    color: rgb(154, 4, 248);
+    border-radius: 20px;
+}
+
+.details-active {
+    height: fit-content;
+    width: fit-content;
+}
+
+
+.details-active {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    width: 50%;
+    font-size: 20px;
+}
