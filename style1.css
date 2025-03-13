@@ -87,3 +87,30 @@ input{
     width: 50%;
     font-size: 20px;
 }
+
+@media screen and (max-width: 1000px) {
+    .box{
+        width: 50%;
+    }
+    input{
+        width: 100px;
+        height: 20px;
+        font-size: 10px;
+        padding-left: 10px;
+        border-radius: 5px;
+    }
+    #button{
+        height: fit-content;
+        width: fit-content;
+        font-size: 10px;
+        padding: 2px;
+        border-radius: 2px;
+    }
+    h1{
+        font-size: 1rem;
+    }
+    .details-active{
+        font-size: 0.5rem;
+    }
+}
+
